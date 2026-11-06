@@ -16,3 +16,12 @@ A pergunta vem em português e o conteúdo está em inglês. Um modelo multilín
 
 ## 005: Discord como primeira interface para outras pessoas
 O bot se conecta ao Discord "de dentro para fora", então não precisa abrir portas no roteador nem se preocupar com CGNAT. Os amigos já estão lá.
+
+## 006: Mods duplicados → fica a versão mais nova
+A pasta de mods do ATM10 tinha duas versões do PneumaticCraft (8.2.21 e 8.2.23). O extrator lê o `neoforge.mods.toml` de cada `.jar`, agrupa pelo `modId` e mantém só a versão mais nova, para não indexar conteúdo repetido.
+
+## 007: Receitas ficam fora da primeira versão
+São mais de 120 mil arquivos JSON de receita, e o ATM10 altera várias receitas com scripts KubeJS. Indexar os JSON originais poderia gerar respostas erradas. Os guias já citam as receitas principais pelo nome.
+
+## 008: Guias em inglês, resposta em português
+Os guias traduzidos dentro dos mods são incompletos. Indexamos o inglês (mais completo) e o LLM responde em português.

@@ -36,8 +36,13 @@ pergunta (PT-BR) ──► busca os trechos mais parecidos no ChromaDB
 
 ## Roadmap
 
-- [ ] **Etapa 0:** ambiente, repositório e exploração dos arquivos do modpack
-- [ ] **Etapa 1:** extratores (quests, nomes/descrições de itens, livros-guia) → `data/documentos.jsonl`
+- [x] **Etapa 0:** ambiente, repositório e exploração dos arquivos do modpack
+  - ATM10 7.3: 500 mods, 157 mil chaves de tradução, 2.097 páginas Patchouli (41 mods), 1.092 guias Markdown (22 mods), quests do FTB Quests em vários idiomas
+- [ ] **Etapa 1:** extratores → `data/documentos.jsonl`
+  - [x] descrições de itens (`lang/en_us.json`)
+  - [x] livros-guia Patchouli
+  - [x] guias em Markdown (GuideME: AE2, ExtendedAE...)
+  - [ ] quests do FTB Quests
 - [ ] **Etapa 2:** indexação (embeddings + ChromaDB) e RAG pelo terminal, com citação das fontes
 - [ ] **Etapa 3:** conjunto de perguntas de teste (`eval/`) para medir a qualidade + bot de Discord
 - [ ] **Etapa 4:** documentação final, diagrama e GIF de demonstração
@@ -55,6 +60,9 @@ copy .env.example .env   # e preencha as chaves
 
 # Etapa 0: ver o que existe dentro do modpack
 python scripts\explorar_modpack.py "C:\caminho\para\o\modpack"
+
+# Etapa 1: extrair os documentos (usa MODPACK_PATH do .env)
+python scripts\extrair.py
 ```
 
 > ⚠️ Os arquivos do modpack **não** são versionados neste repositório (licenças dos mods). Cada pessoa usa a própria cópia baixada do CurseForge.
