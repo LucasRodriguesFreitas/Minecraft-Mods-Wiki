@@ -1,0 +1,10 @@
+# Etapa 0 e 1: só biblioteca padrão do Python, nada a instalar.
+
+# Etapa 2: RAG
+python-dotenv
+chromadb
+sentence-transformers
+google-genai
+
+# Etapa 3: bot de Discord
+discord.py

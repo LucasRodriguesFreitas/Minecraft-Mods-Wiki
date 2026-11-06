@@ -1,0 +1,18 @@
+# Segredos
+.env
+
+# Ambiente Python
+.venv/
+__pycache__/
+*.pyc
+
+# Dados gerados e arquivos do modpack (não versionar: tamanho e licença dos mods)
+data/*
+!data/.gitkeep
+modpack/
+
+# Editor / sistema
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
